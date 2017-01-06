@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/update_dialog_bg" >
+
+    <LinearLayout
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:paddingBottom="8dp" >
+
+        <!-- Title -->
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dp" >
+
+            <ImageView
+                android:id="@+id/WIFI_tips"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:contentDescription="wifi提示"
+                android:src="@drawable/update_wifi_disable" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="title"
+                android:textColor="#888888"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
+        <!-- split -->
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#88888888" />
+        <!-- Message -->
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="350dp"
+            android:fillViewport="true"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/message"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:focusable="true"
+                android:textColor="#888888" />
+        </ScrollView>
+        <!-- Ignore CheckBox -->
+
+        <CheckBox
+            android:id="@+id/update_id_check"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginLeft="10dp"
+            android:button="@drawable/update_button_check_selector"
+            android:text="@string/update_ignore"
+            android:textColor="#000" />
+        <!-- OK&Cancel Button -->
+
+        <com.android.internal.widget.ButtonBarLayout
+            style="?attr/buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="4dp" >
+
+            <Button
+                android:id="@+id/btn_cancel"
+                style="?attr/buttonBarNegativeButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Cancel"
+                android:textSize="14sp"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/btn_ignore"
+                style="?attr/buttonBarNeutralButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Ignore"
+                android:textSize="14sp"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/btn_yes"
+                style="?attr/buttonBarPositiveButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Yes"
+                android:textSize="14sp"
+                android:visibility="invisible" />
+        </com.android.internal.widget.ButtonBarLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,8 @@
+<resources>
+
+    <style name="dialogWindowAnim" mce_bogus="1" parent="android:Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/update_dialog_enter</item>
+        <item name="android:windowExitAnimation">@anim/update_dialog_exit</item>
+    </style>
+
+</resources>
